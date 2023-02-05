@@ -1,24 +1,23 @@
 import React from 'react';
 
 const CartItem = (props) => {
-    const { price, title, qty } = props.product;
-    const {
-      product,
-      onIncreaseQuantity,
-      onDecreaseQuantity,
-      onDeleteProduct
-    } = props;
-    return (
-      <div className="cart-item">
-        {this.props.jsx}
-        <div className="left-block">
-          <img style={styles.image} />
-        </div>
-        <div className="right-block">
-          <div style={ { fontSize: 25 } }>{title}</div>
-          <div style={ { color: '#777' } }>Rs {price} </div>
-          <div style={ { color: '#777' } }>Qty: {qty} </div>
-          <div className="cart-item-actions">
+  const { price, title, qty } = props.product;
+  const {
+    product,
+    onIncreaseQuantity,
+    onDecreaseQuantity,
+    onDeleteProduct
+  } = props;
+  return (
+    <div className="cart-item">
+      <div className="left-block">
+        <img style={styles.image} />
+      </div>
+      <div className="right-block">
+        <div style={ { fontSize: 25 } }>{title}</div>
+        <div style={ { color: '#777' } }>Rs {price} </div>
+        <div style={ { color: '#777' } }>Qty: {qty} </div>
+        <div className="cart-item-actions">
             {/* Buttons */}
             <img
               alt="increase"
@@ -39,10 +38,10 @@ const CartItem = (props) => {
               onClick={() => onDeleteProduct(product)}
             />
           </div>
-        </div>
       </div>
-    );
-  }
+    </div>
+  );
+}
 
 const styles = {
   image: {
