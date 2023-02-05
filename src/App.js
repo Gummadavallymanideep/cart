@@ -12,21 +12,21 @@ class App extends React.Component {
           price: 99,
           title: 'Watch',
           qty: 1,
-          img: '',
+          img: 'https://images.unsplash.com/photo-1524805444758-089113d48a6d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80',
           id: 1
         },
         {
           price: 999,
           title: 'Mobile Phone',
           qty: 10,
-          img: '',
+          img: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80',
           id: 2
         },
         {
           price: 999,
           title: 'Laptop',
           qty: 4,
-          img: '',
+          img: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80',
           id: 3
         }
       ]
@@ -93,6 +93,7 @@ class App extends React.Component {
           onDecreaseQuantity={this.handleDecreaseQuantity}
           onDeleteProduct={this.handleDeleteProduct}
         />
+        <div style={ {padding: 10, fontSize: 20} }>TOTAL: {this.getCartTotal()} </div>
       </div>
     );
   }
