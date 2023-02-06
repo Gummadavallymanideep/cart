@@ -13,13 +13,13 @@ const firebaseConfig = {
     storageBucket: "cart-1ef1a.appspot.com",
     messagingSenderId: "682712438829",
     appId: "1:682712438829:web:86777c4d1ab325c08e40a4"
-  };
+};
 
-  firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
 
-  ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"));
   
-  // If you want your app to work offline and load faster, you can change
-  // unregister() to register() below. Note this comes with some pitfalls.
-  // Learn more about service workers: https://bit.ly/CRA-PWA
-  serviceWorker.unregister();
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();
