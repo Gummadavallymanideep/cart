@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from "./serviceWorker";
-import * as firebase from "firebase";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
 import "firebase/firestore";
 
 const firebaseConfig = {
@@ -15,7 +15,7 @@ const firebaseConfig = {
     appId: "1:682712438829:web:86777c4d1ab325c08e40a4"
 };
 
-firebase.initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
 
 ReactDOM.render(<App />, document.getElementById("root"));
   
