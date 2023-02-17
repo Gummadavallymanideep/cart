@@ -3,8 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from "./serviceWorker";
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+// import * as firebase from "firebase";
+import { initializeApp } from "firebase/app";
 import "firebase/firestore";
+// import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
 
 const firebaseConfig = {
     apiKey: "AIzaSyAQL6yFFpLiDcvLovdcAk305iSPWSHQUBU",
@@ -14,8 +16,16 @@ const firebaseConfig = {
     messagingSenderId: "682712438829",
     appId: "1:682712438829:web:86777c4d1ab325c08e40a4"
 };
-
+// firebase.initializeApp(firebaseConfig);
 const app = initializeApp(firebaseConfig);
+// const db = getFirestore(app);
+
+// async function getCities(db){
+//     const citiesCol = collection(db, 'cities');
+//     const citySnapshot = collection(citiesCol);
+//     const cityList = citySnapshot.docs.map(doc => doc.data());
+//     return cityList;
+// }
 
 ReactDOM.render(<App />, document.getElementById("root"));
   
